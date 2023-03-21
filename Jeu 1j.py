@@ -1,3 +1,5 @@
+# création des couleurs pour le jeu a finaliser
+
 import random
 import pygame
 
