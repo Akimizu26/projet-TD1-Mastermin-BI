@@ -9,3 +9,6 @@ def gen_code(code_size, colors):
     r = ''
     for _ in range(code_size):
         r += choice(colors)
+def check_guess(guess, code_size, colors):
+    present_colors = [ i in colors for i in guess ]
+    return len( guess ) == code_size and False not in present_colors
