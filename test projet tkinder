@@ -4,3 +4,8 @@ def gen_colors(code_size):
         return ascii_uppercase[:code_size]
     else:
         return ascii_uppercase
+        from random import choice
+def gen_code(code_size, colors):
+    r = ''
+    for _ in range(code_size):
+        r += choice(colors)
