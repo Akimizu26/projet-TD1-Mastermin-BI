@@ -1,0 +1,6 @@
+from string import ascii_uppercase
+def gen_colors(code_size):
+    if code_size <= 26:
+        return ascii_uppercase[:code_size]
+    else:
+        return ascii_uppercase
