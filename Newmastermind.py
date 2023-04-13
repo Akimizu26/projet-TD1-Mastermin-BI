@@ -11,3 +11,9 @@ my_box.current(2)
 my_box.pack()
 
 root.mainloop()
+label (root, text='Jeu du mastermind').pack(fill='x')
+Button (root, text='Bouton start').pack(fill='x',expand=True) 
+Button (root, text='bouton setting').pack(fill='y',expand=True)
+Button (root, text='Bouton sortie').pack(fill='both',expand=True)
+
+root.mainloop()
