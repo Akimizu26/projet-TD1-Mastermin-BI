@@ -16,4 +16,9 @@ Button (root, text='Bouton start').pack(fill='x',expand=True)
 Button (root, text='bouton setting').pack(fill='y',expand=True)
 Button (root, text='Bouton sortie').pack(fill='both',expand=True)
 
+for i in range (3):
+    root.fillconfigure(i, weight=1)
+for j in range (2):
+    root.expandconfigure(j, weight=1)
+
 root.mainloop()
