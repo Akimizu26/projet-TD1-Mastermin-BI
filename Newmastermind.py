@@ -1,24 +1,15 @@
-from tkinter import Label, Tk
-from tkinter.ttk import Combobox
+#Ici on va importer toutes les libraires dont on a besoin pour le projet
+import tkinter as tk
+import random
 
-root = Tk()
-root.title("Mastermind TD01")
-root.config(bg='blue')
+#On donne un nom à notre fenêtre principale et on la dimensionne
 
-Label(root, text='Choisissez un nombre:').pack()
-my_box = Combobox(root, values=(2, 4, 6, 8))
-my_box.current(2)
-my_box.pack()
+NB_OF_GUESS = 11
+TMP = NB_OF_GUESS
+CODE_LENGTH = 4
+COLOR_SIZE = 40
+COLOR_PADDING = 50
 
-root.mainloop()
-label (root, text='Jeu du mastermind').pack(fill='x')
-Button (root, text='Bouton start').pack(fill='x',expand=True) 
-Button (root, text='bouton setting').pack(fill='y',expand=True)
-Button (root, text='Bouton sortie').pack(fill='both',expand=True)
+WIDTH = CODE_LENGTH*90
+HEIGHT = NB_OF_GUESS*55+70
 
-for i in range (3):
-    root.fillconfigure(i, weight=1)
-for j in range (2):
-    root.expandconfigure(j, weight=1)
-
-root.mainloop()
