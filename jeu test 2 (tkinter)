@@ -1,6 +1,0 @@
-#essai avec bibliothèque tkinter
-import random
-import tkinter as tk
-
-# Liste des couleurs disponibles
-COLORS = ['red', 'blue', 'green', 'yellow', 'purple', 'orange']
