@@ -1,25 +1,40 @@
-from string import ascii_uppercase
-def gen_colors(code_size):
-    if code_size <= 26:
-        return ascii_uppercase[:code_size]
-    else:
-        return ascii_uppercase
-        from random import choice
-def gen_code(code_size, colors):
-    r = ''
-    for _ in range(code_size):
-        r += choice(colors)
-def check_guess(guess, code_size, colors):
-    present_colors = [ i in colors for i in guess ]
-    return len( guess ) == code_size and False not in present_colors
-def score_guess(code, guess):
-    n_good_position = 0
-    n_false_position = 0
-    if len( code ) == len( guess ):
-        for i in range( len(code) ):
-            if code[i] == guess[i]:
-                n_good_position += 1
-            elif guess[i] in code:
-                n_false_position += 1
-        
-        return n_good_position , n_false_position
+Ce programme est un jeu pendu en utilisant la bibliothèque tkinter en Python. Le but du jeu est de deviner une combinaison de lettres en un nombre limité d'essais.
+Fonctionnalités
+•	Une interface graphique pour interagir avec le joueur
+•	Le joueur doit choisir des lettres pour composer la combinaison
+Readme:
+PENDU
+Règles du jeu
+•	Le jeu consiste à deviner une combinaison secrète de lettre choisies par l'ordinateur.
+•	Les joueurs peuvent choisir la lettre de chaque tentative.
+•	Le joueur a x essais pour trouver la combinaison secrète. (En fonction du nombre de caractères du mot) 
+•	Fonctions créées : 
+. Tk() : Crée une instance de la classe Tk, qui représente la fenêtre principale de l'application.
+. Button() : Crée un bouton dans la fenêtre avec les spécifications données, telles que le texte à afficher, la couleur de fond, la police et la commande à exécuter lorsqu'il est cliqué.
+. Label() : Crée une étiquette dans la fenêtre pour afficher du texte.
+. Canvas() : Crée un canevas dans la fenêtre où des dessins ou des graphiques peuvent être effectués.
+. create_line() : Une méthode du canevas qui dessine une ligne entre deux points donnés.
+. create_oval() : Une méthode du canevas qui dessine un cercle ou une ellipse délimitée par un rectangle donné.
+. clear_fenetre : utilisée pour nettoyer la fenêtre principale de l'application en détruisant tous les widgets 
+. geometry : utilisée pour définir la taille initiale de la fenêtre principale de l'application.
+. configure : configure les options d’un widget Tkinter apres sa création.
+. place() : Positionne un widget à des coordonnées spécifiques dans la fenêtre. 
+. selection_mots() pourrait être responsable de sélectionner ou de générer une liste de mots à utiliser dans le jeu.
+. mot_a_trouver : C'est une variable qui semble stocker une liste de mots à trouver dans le jeu.
+. len(): La fonction est utilisée pour obtenir la longueur d'une liste.
+. root.destroy() : C'est une méthode qui détruit la fenêtre principale de votre application. 
+. config() : Méthode pour configurer les options d'un widget après sa création. Dans ce cas, elle est utilisée pour mettre à jour le texte affiché par le widget d'étiquette place_lettre.
+. append() : Méthode pour ajouter un élément à une liste. 
+. dessin.create_line(): est utilisée pour dessiner des lignes sur le canevas.
+. Toplevel() : Crée une nouvelle fenêtre en haut niveau (popup).
+. popup.title : Méthode pour définir le titre de la fenêtre popup.
+. popup.geometry : Méthode pour définir la taille de la fenêtre popup.
+. popup.configure : Méthode pour configurer la fenêtre popup, y compris la couleur de fond.
+. label.place : Méthode pour placer l'étiquette dans la fenêtre popup à des coordonnées spécifiques.
+. popup.lift() : Méthode pour mettre la fenêtre popup au-dessus des autres fenêtres.
+. texte.place : Méthode pour placer le texte dans la fenêtre principale à des coordonnées spécifiques.
+. button_jouer : Définition d'un bouton dans la fonction perdu.
+. button_jouer.place : Méthode pour placer le bouton dans la fenêtre principale à des coordonnées spécifiques.
+. x=''.join : Méthode pour joindre les éléments d'une liste en une chaîne.
+. bouton_aide : Définition d'un bouton.
+. 
