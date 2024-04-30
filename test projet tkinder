@@ -37,4 +37,8 @@ Règles du jeu
 . button_jouer.place : Méthode pour placer le bouton dans la fenêtre principale à des coordonnées spécifiques.
 . x=''.join : Méthode pour joindre les éléments d'une liste en une chaîne.
 . bouton_aide : Définition d'un bouton.
-. 
+. popup.title("regle du jeux") : Définit le titre de la fenêtre popup. 
+. button_quitter : Définit un bouton pour quitter le programme.
+. root.mainloop() : Lance la boucle principale de l'interface graphique Tkinter, permettant à la fenêtre d'être visible et de répondre aux interactions de l'utilisateur.
+
+
